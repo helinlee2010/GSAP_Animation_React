@@ -1,0 +1,65 @@
+.circleWrapper{
+  //border: solid 2px white;
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'circle circle text';
+
+
+  .text{
+    margin-left:0;
+    color:  rgb(48, 58, 48);
+    font-weight: bold;
+    visibility: hidden;
+    grid-template-areas:'text';
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-shadow: 0.1rem 0.1rem rgba(224, 255, 255, 0.6);
+  }
+
+  &:hover .text{
+    visibility: visible;
+  }
+}
+
+.circleTop{
+  width:3rem;
+  height: 3rem;
+  background: #6f4a8e;
+  border-radius: 100%;
+  margin: 2rem 0.2rem 2rem 2rem;
+  cursor: pointer; 
+  border: solid 2px lightgrey;
+}
+
+.circleMiddle{
+  width:3rem;
+  height: 3rem;
+  background: #be5683;
+  border-radius: 100%;
+  margin: 2rem 0.5rem 2rem 2rem;
+  cursor: pointer;
+  border: solid 2px lightgrey;
+}
+
+.circleBottom{
+  width:3rem;
+  height: 3rem;
+  background: #206a5d;
+  border-radius: 100%;
+  margin: 2rem 0.5rem 2rem 2rem;
+  cursor: pointer;
+  border: solid 2px lightgrey;
+}
+
+@media screen and (max-width: 770px){
+  .circleTop .circleMiddle .circleBottom{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0;
+  }
+  .text{
+    margin-left: 0;
+  }
+}
